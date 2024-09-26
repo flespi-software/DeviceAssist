@@ -76,6 +76,29 @@ module.exports = configure(function (/* ctx */) {
       // distDir
 
       // extendViteConf (viteConf) {},
+      extendViteConf (viteConf) {
+        viteConf.base = './'
+        viteConf.logLevel = 'info'
+        // viteConf.optimizeDeps.include = [
+        //   'flespi-io-js/dist/vue3-plugin.js'
+        // ]
+        // viteConf.build = {
+        //   commonjsOptions: {
+        //     include: ['flespi-io-js/dist/vue3-plugin.js']
+        //   }
+        // }
+        viteConf.optimizeDeps.esbuildOptions = {
+          target: 'esnext',
+          // Node.js global to browser globalThis
+          define: {
+            global: 'globalThis'
+          },
+          supported: {
+            bigint: true
+          }
+        }
+        viteConf.build.target = ['esnext']
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [

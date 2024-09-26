@@ -1,6 +1,8 @@
 # DeviceAssistant
 
-DeviceAssistant
+Chat with an AI assistant who knows the documentation of GPS devices.
+
+[Article](https://flespi.com/blog/how-to-get-your-own-ai-device-assistant)
 
 ## Install the dependencies
 ```bash
@@ -28,6 +30,3 @@ npm run lint
 ```bash
 quasar build
 ```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

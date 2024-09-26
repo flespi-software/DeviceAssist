@@ -64,7 +64,6 @@ export const useAuthStore = () => {
           this.info = JSON.parse(e.properties.userProperties.token)
           this.blocked = false
           this.connected = true
-          // commit('setTokenInfo', JSON.parse(e.properties.userProperties.token))
         })
 
         if (token.length === 0) {
